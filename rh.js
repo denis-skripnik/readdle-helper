@@ -26,8 +26,9 @@ let ok_ops_count = 0;
                     text += `
 ${data.d.m}`;
                 }
-                let tags = text.split('\n').join(' ').split(' ').filter(v=> v.startsWith('#'))
-                .map(function(p){return (p.indexOf('.') > -1 ? p.substring(1, p.length - 1) : p.substring(1, p.length))})
+                let hashtags_pattern = /(|\b)#([^:;@#!.,?\r\n\t <>()\[\]]+)(|\b)/g;;
+let tags =text.match(hashtags_pattern)
+                .map(function(p){return p.substring(1, p.length)});
                 const found = tags.some(r=> conf_tags.indexOf(r) >= 0);
 if (found === true) {
 await pdb.addPost(author, bn);
