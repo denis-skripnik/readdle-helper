@@ -1,0 +1,23 @@
+{
+    "tags": ["tag1", "tag2", "tag3"],
+    "db_name": "readdle_helper",
+    "api_node": "https://viz.lexai.host",
+    "main": {
+"account": "viz-login",
+"regular_key": "THIS_PRIVATE_KEY",
+"whitelist": "login1,login2"
+    },
+    "sandbox": {
+        "allow": true,
+        "type": "shares",
+"value": "100000",
+"account": "sandbox.viz-login",
+"regular_key": "THIS_SANDBOX_PRIVATE_KEY"
+    },
+    "popular": {
+        "allow": true,
+        "award_amount": 1000,
+        "account": "popular.viz-login",
+"regular_key": "THIS_POPULAR_PRIVATE_KEY"
+    }
+}

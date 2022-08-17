@@ -1,0 +1,23 @@
+{
+  "name": "readdle-helper",
+  "version": "1.0.0",
+  "description": "Service for reblogs post of tags to sandbox ore main account.",
+  "main": "rh.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denis-skripnik/readdle-helper.git"
+  },
+  "author": "Denis Skripnik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denis-skripnik/readdle-helper/issues"
+  },
+  "homepage": "https://github.com/denis-skripnik/readdle-helper#readme",
+  "dependencies": {
+    "mongodb": "^4.8.1",
+    "viz-js-lib": "^0.10.0"
+  }
+}
