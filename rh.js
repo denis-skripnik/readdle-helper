@@ -53,7 +53,7 @@ if (module.indexOf('index.js') > -1) {
             break;
                 case "receive_award":
 if (opbody.memo.indexOf('viz://@') > -1) {
-    let post = opbody.memo.split('@');
+    let post = opbody.memo.split('@')[1];
 let [author, block] = post.split('/');
 let power = parseFloat(opbody.shares);
 let content = await pdb.getPost(author, block);
