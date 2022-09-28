@@ -21,6 +21,10 @@ let ok_ops_count = 0;
             if (opbody.id === 'V') {
                 let author = opbody.required_regular_auths[0];
                 let data = JSON.parse(opbody.json);
+                if (!data.t) {
+                    console.log(JSON.stringify(data));
+                    continue;
+                }
                 let text = data.t.t;
                 if (data.t === 'p') {
                     text += `
@@ -134,3 +138,7 @@ setInterval(() => {
 }, SUPER_LONG_DELAY);
 
 getNullTransfers()
+
+const cleanup = require("./databases/@db.js").cleanup;
+process.on('SIGINT', cleanup);
+process.on('SIGTERM', cleanup);
