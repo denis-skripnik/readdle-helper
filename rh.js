@@ -33,7 +33,7 @@ ${data.d.m}`;
                 let hashtags_pattern = /(|\b)#([^:;@#!.,?\r\n\t <>()\[\]]+)(|\b)/g;;
 let tags =text.match(hashtags_pattern)
                 .map(function(p){return p.substring(1, p.length)});
-                const found = tags.some(r=> conf_tags.indexOf(r) >= 0);
+                const found = tags.some(r=> conf.tags.indexOf(r) >= 0);
 if (found === true) {
 await pdb.addPost(author, bn);
     let acc = await methods.getAccount(author);
